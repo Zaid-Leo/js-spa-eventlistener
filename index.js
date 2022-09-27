@@ -1,9 +1,8 @@
-const submit = document.querySelector("submit");
-const div = document.querySelector("#placeToSafeColors");
+const setBg = () => {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
+};
 
-div.addEventListener("click", function (event) {
-    handleClick(event, "Es klickte mich!");
-});
-function handleClick(event, message) {
-    alert(message);
-}
+genNew.addEventListener("click", setBg);
+setBg();
